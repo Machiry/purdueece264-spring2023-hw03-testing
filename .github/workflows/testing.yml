@@ -1,0 +1,20 @@
+name: build
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Install all essentials
+      run: apt install build-essentials make
+
+    - name: Run Tests
+      run: make testall
