@@ -27,7 +27,7 @@ void eliminate(int n, int k)
   // print the index of the marked element
   // repeat until only one element is unmarked
   int numleft = n;
-  int count;
+  int count = 0;
   int ind = 0;
   while (numleft > 1)
     {
